@@ -1,0 +1,20 @@
+%h1 Listing winks
+
+%table
+  %tr
+    %th subtext
+    %th giver
+    %th receiver
+    %th
+    %th
+
+  - @winks.each do |wink|
+    %tr
+      %td= wink.subtext
+      %td= wink.giver
+      %td= link_to 'Show', "/winks/#{wink.id}"
+      %td= button_to 'Destroy', "/winks/#{wink.id}", :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Wink', winks_new_path

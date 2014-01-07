@@ -4,7 +4,6 @@
   %tr
     %th Body
     %th Title
-    %th Age
     %th
     %th
     %th
@@ -13,7 +12,6 @@
     %tr
       %td= post.body
       %td= post.title
-      %td= post.age
       %td= link_to 'Show', post
       %td= link_to 'Edit', edit_post_path(post)
       %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }

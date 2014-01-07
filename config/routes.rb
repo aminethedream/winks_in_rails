@@ -1,10 +1,11 @@
 LectureSample::Application.routes.draw do
   resources :posts
 
-get 'winks' => 'winks#index'
-get  'winks/new' => 'winks#new'
-delete 'winks/:id' => 'winks#destroy'
-post 'winks/' => 'winks#create'
+  get 'winks' => 'winks#index'
+  get  'winks/new' => 'winks#new'
+  delete 'winks/:id' => 'winks#destroy'
+  post 'winks/' => 'winks#create'
+  get 'winks/:id' => 'winks#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

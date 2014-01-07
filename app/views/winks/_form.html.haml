@@ -1,0 +1,20 @@
+= form_for @wink do |f|
+  - if @wink.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@wink.errors.count, "error")} prohibited this wink from being saved:"
+      %ul
+        - @wink.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :subtext
+    = f.text_area :subtext
+  .field
+    = f.label :giver
+    = f.text_field :giver
+  .field
+    = f.label :receiver
+    = f.text_field :receiver
+
+  .actions
+    = f.submit 'Save'
